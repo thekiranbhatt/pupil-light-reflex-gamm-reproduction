@@ -1,0 +1,4 @@
+# Python 3.13 was used. Other recent versions should work.
+pandas>=2.0
+numpy>=1.26
+matplotlib>=3.8

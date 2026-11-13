@@ -1,0 +1,15 @@
+# Data is not redistributed here: download it from Zenodo (see data/README.md)
+data/*
+!data/README.md
+
+# R models are large; the summary text and CSVs are kept
+results/r/*.rds
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python / system
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store

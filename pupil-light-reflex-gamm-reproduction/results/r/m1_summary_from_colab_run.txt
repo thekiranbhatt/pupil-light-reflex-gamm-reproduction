@@ -1,0 +1,45 @@
+# Output of print(summary(m1)) from my Colab run of an earlier version of r/run_m1.R (same model code).
+# rho estimated for the AR(1) correction in that run: 0.9967
+
+
+Family: gaussian 
+Link function: identity 
+
+Formula:
+Pupil_Combined ~ CondName + s(Time_s, k = K_MAIN, bs = "cr") + 
+    s(Time_s, by = CondName, k = K_COND, bs = "cr") + LowTh_z + 
+    Active_z + ti(Time_s, LowTh_z, bs = c("cr", "tp"), k = c(K_TI_T, 
+    K_TI_Z)) + ti(Time_s, Active_z, bs = c("cr", "tp"), k = c(K_TI_T, 
+    K_TI_Z)) + age_z + Sex_bin + s(Subject_ID, bs = "re") + s(Time_s, 
+    Subject_ID, bs = "fs", k = K_FS)
+
+Parametric coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   -0.1577159  0.0121148 -13.018  < 2e-16 ***
+CondNameRed    0.0220916  0.0006120  36.099  < 2e-16 ***
+CondNameGreen  0.0049913  0.0006121   8.154 3.54e-16 ***
+CondNameBlue   0.0117200  0.0006063  19.330  < 2e-16 ***
+LowTh_z        0.0056407  0.0072585   0.777    0.437    
+Active_z       0.0033843  0.0079560   0.425    0.671    
+age_z          0.0046193  0.0095143   0.486    0.627    
+Sex_bin       -0.0112106  0.0200823  -0.558    0.577    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                              edf  Ref.df        F p-value    
+s(Time_s)                58.96164  58.982 5198.291  <2e-16 ***
+s(Time_s):CondNameWhite  18.07994  18.899   50.762  <2e-16 ***
+s(Time_s):CondNameRed    18.87398  18.994  454.226  <2e-16 ***
+s(Time_s):CondNameGreen   1.00299   1.003    0.000       1    
+s(Time_s):CondNameBlue   18.18088  18.916   33.809  <2e-16 ***
+ti(LowTh_z,Time_s)      163.15106 187.637   22.015  <2e-16 ***
+ti(Active_z,Time_s)     153.82268 179.691   39.879  <2e-16 ***
+s(Subject_ID)             0.05574  34.000    0.002  <2e-16 ***
+s(Time_s,Subject_ID)    356.14993 387.000  700.207  <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.873   Deviance explained = 87.3%
+fREML = -2.3637e+06  Scale est. = 8.6041e-05  n = 410564
+
