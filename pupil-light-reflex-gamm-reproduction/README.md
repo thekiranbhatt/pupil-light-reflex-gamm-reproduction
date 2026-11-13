@@ -1,8 +1,18 @@
-# Re-checking a published pupil study: sensory traits and the pupil's response to light
+# Recreating analyses from a published pupil study: sensory traits and the pupil's response to light
 
-A learning project. I took a 2026 paper on how the pupil reacts to a flash of light, downloaded the authors' public data, and tried to reproduce parts of the analysis to see which published numbers I could recover and where I could not.
+A learning project. I took a 2026 paper on how the pupil reacts to a flash of light, downloaded the authors' public data, and recreated parts of the analysis to see which published numbers I could recover and where I could not.
 
-**This is not a new finding.** The paper is by Kanari & Tsutsumi, and the data and most of the modelling code are theirs (see [NOTICE.md](NOTICE.md)). Terms in *italics* are explained in [docs/glossary.md](docs/glossary.md).
+**This is not a new finding, and it is not a replication.** The data and most of the modelling code are the authors' (see [NOTICE.md](NOTICE.md)). Terms in *italics* are explained in [docs/glossary.md](docs/glossary.md).
+
+## What kind of check this is
+
+| | What it means | Done here? |
+|---|---|---|
+| **Re-running the authors' code** on their data | Can the published numbers be regenerated from the shared files? | Yes, for model M1 only |
+| **Recreating from the paper's description** | Write my own code from the methods text and compare with the published numbers | Yes, for inclusion, reliability and the average waveforms |
+| **Replication** | Collect new data and see whether the finding holds | No |
+
+Matching the published numbers shows that they can be recovered. It does not show that the study's conclusions are right, and one mismatch I could not explain (below) is not evidence of an error either.
 
 ![Annotated average pupil response](figures/annotated_average_waveform.png)
 
